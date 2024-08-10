@@ -32,9 +32,9 @@ const posts = [
     content: [
       { type: 'paragraph', content: 'Fala galeraa 👋'},
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifolio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      { type: 'link', content: "👉{' '}Rafaeldev/doctorcare"},
-      { type: 'link', content: "#novoprojeto{' '}"},
-      { type: 'link', content: "#nlw{' '}"},
+      { type: 'link', content: "👉 Rafaeldev/dev"},
+      { type: 'link', content: "#novoprojeto"},
+      { type: 'link', content: "#nlw"},
       { type: 'paragraph', content: "#rocketseat"}
     ],
     publishedAt: new Date('2022-05-03 15:00:00'),
@@ -50,7 +50,8 @@ function App() {
         <main>
           {posts.map(post => {
             return (
-              <Post 
+              <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
